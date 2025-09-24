@@ -64,7 +64,7 @@ class LookupType5 extends LookupType {
   getCoverageTable(index) {
     if (this.substFormat !== 3 && !index) return super.getCoverageTable();
 
-    if (!index)
+    if (index == null)
       throw new Error(
         `lookup type 5.${this.substFormat} requires an coverage table index.`
       );
